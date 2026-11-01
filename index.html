@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#101022"><title>ClipNova AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="brand"><div class="logo">▶</div><div><b>CLIPNOVA AI</b><small>CREATE • ANIMATE • PUBLISH</small></div></div><span class="free">FREE STARTER</span></header>
+<main>
+<section class="hero">
+  <div class="tag">AI VIDEO STUDIO</div><h1>Ideas se<br><em>video tak.</em></h1>
+  <p>Animated stories, cartoon concepts, memes aur short-video planning — sab ek mobile workspace mein.</p>
+  <button class="primary" onclick="document.querySelector('#create').scrollIntoView({behavior:'smooth'})">＋ Video idea banao</button>
+  <div class="hero-art"><div class="orb">✦</div><div class="play">▶</div><span>IDEA → VIDEO PLAN</span></div>
+</section>
+<section id="create" class="panel">
+  <div class="section-head"><div><div class="tag">01 / CREATE</div><h2>Naya video plan</h2></div><span class="pill">Studio</span></div>
+  <label for="prompt">Apni video ka idea likho</label>
+  <textarea id="prompt" placeholder="Example: Diwali par funny boyfriend-girlfriend cartoon story..."></textarea>
+  <div class="grid two">
+    <div><label for="style">Video style</label><select id="style"><option>3D Cartoon</option><option>2D Animation</option><option>Cinematic Story</option><option>Meme</option><option>Educational</option></select></div>
+    <div><label for="ratio">Format</label><select id="ratio"><option value="9:16">9:16 • Reels / Shorts</option><option value="16:9">16:9 • YouTube</option><option value="1:1">1:1 • Square</option></select></div>
+  </div>
+  <div class="grid two">
+    <div><label for="duration">Duration</label><select id="duration"><option>30 seconds</option><option>15 seconds</option><option>60 seconds</option><option>3 minutes</option></select></div>
+    <div><label for="language">Language</label><select id="language"><option>Hindi</option><option>Hinglish</option><option>English</option></select></div>
+  </div>
+  <button class="primary wide" id="generate">Mera video plan banao ✨</button>
+  <div id="result" class="result" hidden></div>
+  <p class="hint">Note: Yeh starter app video script aur AI prompt banata hai. Actual video render karne ke liye baad mein video-generation service/API connect karni hogi.</p>
+</section>
+<section class="panel">
+  <div class="section-head"><div><div class="tag">02 / CHARACTERS</div><h2>Character universe</h2></div><span class="pill">500 concepts</span></div>
+  <p class="muted">Original character ideas explore karein. Kisi existing film character, logo ya footage ko use karne ke liye rights zaroori ho sakte hain.</p>
+  <div class="grid two"><select id="character"></select><button id="randomChar" class="outline">Random character ↗</button></div>
+  <div id="characterInfo" class="character-card"></div>
+</section>
+<section class="panel">
+  <div class="section-head"><div><div class="tag">03 / PUBLISH</div><h2>Social upload checklist</h2></div></div>
+  <p class="muted">Video file chun kar upload checklist taiyar karein.</p>
+  <label for="caption">Caption</label><textarea id="caption" placeholder="Apne video ka caption likhein..."></textarea>
+  <label class="file-label">Finished video choose karein <input id="videoFile" type="file" accept="video/*"></label>
+  <button class="primary wide" id="publish">Publishing checklist banao</button>
+  <div id="publishResult" class="result" hidden></div>
+  <p class="hint">Direct auto-publishing abhi enabled nahi hai. Iske liye official platform APIs, account permissions aur approval chahiye.</p>
+</section>
+<section class="panel">
+  <div class="tag">04 / WORKSPACE</div><h2>ClipNova mein</h2>
+  <div class="features"><p>✓ Phone-friendly Android interface</p><p>✓ Video prompt aur script planner</p><p>✓ 500 original character concepts</p><p>✓ Reels, Shorts aur YouTube formats</p><p>✓ Social upload checklist</p></div>
+</section>
+</main>
+<footer>CLIPNOVA AI <span>Make your next idea a story.</span></footer>
+<script src="app.js"></script>
+</body></html>
